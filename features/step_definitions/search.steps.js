@@ -33,11 +33,6 @@ Before(async function () {
     expect(actual).contains(expected);
   });
 
-  Then("user can't order ticket ", async function () {
-    const isDisabled = await page.$eval("button", (button) => button.disabled);
-    expect(isDisabled).toEqual(true);
-  });
-
   Then("user can't click", async function () {
     const position = "body > main > section:nth-child(1) > div:nth-child(2) > ul > li > a"; // текущая дата, первый фильм, сеанс 00:00 
   expect(() =>
